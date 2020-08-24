@@ -1,0 +1,39 @@
+body{
+    background: rgb(255,175,189);
+    background: linear-gradient(90deg, rgba(255,175,189,1) 55%, rgba(255,195,160,1) 66%);
+}
+
+header{
+    margin-top: 20px;
+    color:white;
+    font-size: 1.5em;
+}
+/* main wrapper */
+.main-wrapper{
+    margin-top: 30px;
+}
+/* grid contianer for movies */
+.movie-container{
+    max-width: 1440px;
+    margin: 0 auto;
+    
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 20px;
+}
+
+/* remove button for each div */
+.deleteMovie{
+    position:absolute;
+    top:0;
+    right: 0;
+    border-radius: 40px;
+    background: black;
+    color: white;
+}
+
+/*add movie button */
+.add-movie{
+    padding: 20px;
+}
+

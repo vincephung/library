@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+    <head>
+    <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css" type="text/css">
+        
+        <title>Library</title>
+    </head>
+    <body>
+
+        <!-- header-->
+        <header class="container d-flex justify-content-between">
+            <div class="heading">
+                <h1>Movie Library</h1>
+                <p>Store your favorite movies</p>
+            </div>
+            <button type="button" class="btn btn-primary add-movie" data-toggle="modal" data-target="#addMovieModal">Add a new movie</button>
+        </header>
+
+        <main class="main-wrapper">
+            <!--Create modal popup to enter new entry-->
+            <div class="modal" id="addMovieModal" role="dialog" aria-labelledby="addMovieLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="addMovieLabel">Add a movie</h5>
+                            <button type="button" class="close" data-dismiss="modal">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="new-form">
+                                <div class="form-group">
+                                    <label for="movie-title" class="col-form-label">Title:</label>
+                                    <input type="text" class="form-control" id="movie-title" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="movie-director" class="col-form-label">Director:</label>
+                                    <input type="text" class="form-control" id="movie-director"required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="movie-rating" class="col-form-label">Rating:</label>
+                                    <input type="number" class="form-control" id="movie-rating"required>
+                                </div>
+                                <div class="form-group form-check">
+                                    <input type="checkbox" class="form-check-input" id="movie-watched">
+                                    <label for="movie-watched" class="form-check-label">Have you watched this movie?</label>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn btn-primary submitBtn" type="submit" data-dismiss="modal">Add Movie</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Container for movie entries -->
+            <div class="movie-container" id="library">
+
+            </div>
+        </main>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-database.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>        <script type="text/javascript" src="script.js"></script>
+    </body>
+</html>
