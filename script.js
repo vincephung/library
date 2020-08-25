@@ -38,10 +38,8 @@ function addMovie(){
     watched = (watched) ? "&#10003; watched" : "&#10003; not watched";
     libraryDatabase.push().set(new Movie(title,director,rating,watched)); // push this movie to database
     
-    $("#new-form").trigger("reset");
+    $("#new-form").trigger("reset"); // clear form inputs
 }
-
-
 
 
 //updates library and adds new movie to the page
@@ -74,8 +72,6 @@ function renderLibrary(){
             deleteBtn.forEach(deleteIcon => {
                 deleteIcon.addEventListener('click',e=>{
                     let key = e.target.parentNode.parentNode.getAttribute("data-key");
-                    console.log(e.target.parentNode.parentNode);
-                    console.log(e.target.parentNode.parentNode.parentNode);
                     libraryContainer.removeChild(e.target.parentNode.parentNode);
                     libraryDatabase.child(key).remove();
                 });
