@@ -1,4 +1,4 @@
-// Initialize farebase database
+// Initialize firebase database
 const firebaseConfig = {
     apiKey: "AIzaSyB7w2FgtcseahS0-Uv-6ZnDA2aKgHT0-e8",
     authDomain: "library-310ca.firebaseapp.com",
